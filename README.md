@@ -32,9 +32,10 @@ Retorna a listagem de todos os pontos turísticos cadastrados.
 ```json
 { "erro": "Erro interno do servidor" }
 ```
-GET /turismos/:id
+### GET /turismos/:id
 Retorna um ponto turístico pelo ID.
-Parâmetro: id (obrigatório)
+
+**Parâmetro:** `id` (obrigatório)
 
 **Resposta 200:**
 ```json
@@ -45,22 +46,22 @@ Parâmetro: id (obrigatório)
   "descricao": "Símbolo do Brasil, localizado no Morro do Corcovado"
 }
 ```
-Resposta 404:
+**Resposta 404:**
 ```json
 { "erro": "Ponto turístico não encontrado" }
 ```
-Resposta 400:
+**Resposta 400:**
 ```json
 { "erro": "ID inválido" }
 ```
-Resposta 500:
+**Resposta 500:**
 ```json
 { "erro": "Erro interno do servidor" }
 ```
-POST /turismos
+### POST /turismos
 Cadastra um novo ponto turístico.
 
-Corpo da requisição:
+**Corpo da requisição:**
 ```json
 {
   "nome": "Cristo Redentor",
@@ -70,24 +71,25 @@ Corpo da requisição:
 ```
 Campos:
 Tabela
-Campo	Tipo	Obrigatório
+| Campo | Tipo | Obrigatório |
+|---|---|---|
+| `nome` | String | ✅ Sim |
+| `localizacao` | String | ✅ Sim |
+| `descricao` | String | ❌ Não |
 
-nome	
-String	✅ Sim
-localizacao	
-String	✅ Sim
-descricao	
-String	❌ Não
 
-Resposta 201: 
+**Resposta 201:**
+
 Sucesso sem conteúdo.
 
-Resposta 500:
+**Resposta 500:**
 ```json
 { "erro": "Erro interno do servidor" }
 ```
-PUT /turismos/:id
+### PUT /turismos/:id
+
 Atualiza um ponto turístico existente.
+
 Parâmetro: id (obrigatório)
 
 Corpo da requisição:
@@ -98,7 +100,7 @@ Corpo da requisição:
   "descricao": "Um dos principais cartões postais do mundo"
 }
 ```
-Resposta 200:
+**Resposta 200:**
 ```json
 {
   "id": 1,
@@ -107,31 +109,33 @@ Resposta 200:
   "descricao": "Um dos principais cartões postais do mundo"
 }
 ```
-Resposta 400:
+**Resposta 400:**
 ```json
 { "erro": "ID inválido ou dados malformados" }
 ```
-Resposta 500:
+**Resposta 500:**
 ```json
 { "erro": "Erro interno do servidor" }
 ```
-DELETE /turismos/:id
+### DELETE /turismos/:id
+
 Remove um ponto turístico.
+
 Parâmetro: id (obrigatório)
 
-Resposta 204: 
+**Resposta 204:** 
 Sucesso sem conteúdo.
 
-Resposta 400:
+**Resposta 400:**
 ```json
 { "erro": "ID inválido" }
 ```
-Resposta 500:
+**Resposta 500:**
 ```json
 { "erro": "Erro interno do servidor" }
 ```
-Autenticação
+**Autenticação**
 Cabeçalho obrigatório em todas as requisições:
 
-plaintext
+**plaintext**
 Authorization: Bearer <seu-token-aqui>
