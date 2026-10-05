@@ -9,9 +9,11 @@ Esta API é utilizada para gerenciar um catálogo de pontos turísticos, permiti
 ### GET /turismos
 Retorna a listagem de todos os pontos turísticos cadastrados.
 
-**Parâmetros:** Nenhum.
+Parâmetros: Nenhum.
+
 
 **Resposta 200:**
+
 ```json
 [
   {
@@ -27,6 +29,7 @@ Retorna a listagem de todos os pontos turísticos cadastrados.
     "descricao": "Centro histórico com arquitetura colonial"
   }
 ]
+
 ```
 **Resposta 500:**
 ```json
@@ -35,7 +38,7 @@ Retorna a listagem de todos os pontos turísticos cadastrados.
 ### GET /turismos/:id
 Retorna um ponto turístico pelo ID.
 
-**Parâmetro:** `id` (obrigatório)
+Parâmetro: `id` (obrigatório)
 
 **Resposta 200:**
 ```json
@@ -45,6 +48,7 @@ Retorna um ponto turístico pelo ID.
   "localizacao": "Rio de Janeiro - RJ",
   "descricao": "Símbolo do Brasil, localizado no Morro do Corcovado"
 }
+
 ```
 **Resposta 404:**
 ```json
@@ -68,9 +72,10 @@ Cadastra um novo ponto turístico.
   "localizacao": "Rio de Janeiro - RJ",
   "descricao": "Símbolo do Brasil, localizado no Morro do Corcovado"
 }
+
 ```
-Campos:
-Tabela
+
+**Campos:Tabela**
 | Campo | Tipo | Obrigatório |
 |---|---|---|
 | `nome` | String | ✅ Sim |
@@ -92,7 +97,7 @@ Atualiza um ponto turístico existente.
 
 Parâmetro: id (obrigatório)
 
-Corpo da requisição:
+**Corpo da requisição:**
 ```json
 {
   "nome": "Cristo Redentor - Atualizado",
@@ -122,10 +127,9 @@ Corpo da requisição:
 Remove um ponto turístico.
 
 Parâmetro: id (obrigatório)
+---
 
-
-
-**Resposta 204:** 
+**Resposta 204:**
 
 Sucesso sem conteúdo.
 
