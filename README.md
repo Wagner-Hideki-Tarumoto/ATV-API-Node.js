@@ -123,7 +123,10 @@ Remove um ponto turístico.
 
 Parâmetro: id (obrigatório)
 
+
+
 **Resposta 204:** 
+
 Sucesso sem conteúdo.
 
 **Resposta 400:**
